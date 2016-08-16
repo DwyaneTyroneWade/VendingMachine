@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+
+    <include
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_bottom" />
+
+    <ScrollView
+        style="@style/ScrollView"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:paddingLeft="@dimen/dimen_left"
+            android:id="@+id/ll_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--
+        <ListView
+            android:id="@+id/list_capacity"
+            style="@style/ListView" >
+        </ListView>
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,1259 @@
+android.support.annotation.AnimRes
+android.support.annotation.AnimatorRes
+android.support.annotation.AnyRes
+android.support.annotation.ArrayRes
+android.support.annotation.AttrRes
+android.support.annotation.BoolRes
+android.support.annotation.ColorRes
+android.support.annotation.DimenRes
+android.support.annotation.DrawableRes
+android.support.annotation.FractionRes
+android.support.annotation.IdRes
+android.support.annotation.IntDef
+android.support.annotation.IntegerRes
+android.support.annotation.InterpolatorRes
+android.support.annotation.LayoutRes
+android.support.annotation.MenuRes
+android.support.annotation.NonNull
+android.support.annotation.Nullable
+android.support.annotation.PluralsRes
+android.support.annotation.RawRes
+android.support.annotation.StringDef
+android.support.annotation.StringRes
+android.support.annotation.StyleRes
+android.support.annotation.StyleableRes
+android.support.annotation.XmlRes
+android_serialport_api.SerialPort:
+    private static final java.lang.String TAG
+android_serialport_api.SerialPortFinder
+android_serialport_api.SerialPortFinder$Driver
+com.android.volley.AuthFailureError
+com.android.volley.Cache:
+    public abstract com.android.volley.Cache$Entry get(java.lang.String)
+    public abstract void put(java.lang.String,com.android.volley.Cache$Entry)
+    public abstract void initialize()
+    public abstract void invalidate(java.lang.String,boolean)
+    public abstract void remove(java.lang.String)
+    public abstract void clear()
+com.android.volley.Cache$Entry:
+    public byte[] data
+    public java.lang.String etag
+    public long serverDate
+    public long lastModified
+    public long ttl
+    public long softTtl
+    public java.util.Map responseHeaders
+    67:67:public Cache$Entry()
+    91:91:public boolean isExpired()
+    96:96:public boolean refreshNeeded()
+com.android.volley.CacheDispatcher
+com.android.volley.CacheDispatcher$1
+com.android.volley.DefaultRetryPolicy:
+    private int mCurrentRetryCount
+    public static final int DEFAULT_TIMEOUT_MS
+    public static final int DEFAULT_MAX_RETRIES
+    public static final float DEFAULT_BACKOFF_MULT
+    68:68:public int getCurrentTimeout()
+    76:76:public int getCurrentRetryCount()
+    83:83:public float getBackoffMultiplier()
+    92:97:public void retry(com.android.volley.VolleyError)
+    103:103:protected boolean hasAttemptRemaining()
+com.android.volley.ExecutorDelivery
+com.android.volley.ExecutorDelivery$1
+com.android.volley.ExecutorDelivery$ResponseDeliveryRunnable
+com.android.volley.Network
+com.android.volley.NetworkDispatcher
+com.android.volley.NetworkError
+com.android.volley.NetworkResponse
+com.android.volley.NoConnectionError
+com.android.volley.ParseError
+com.android.volley.Request:
+    private static final java.lang.String DEFAULT_PARAMS_ENCODING
+    private static final long SLOW_REQUEST_THRESHOLD_MS
+    private java.lang.Object mTag
+    122:123:public Request(java.lang.String,com.android.volley.Response$ErrorListener)
+    144:144:public int getMethod()
+    154:155:public com.android.volley.Request setTag(java.lang.Object)
+    163:163:public java.lang.Object getTag()
+    170:170:public com.android.volley.Response$ErrorListener getErrorListener()
+    223:250:void finish(java.lang.String)
+    277:280:public final int getSequence()
+    304:305:public com.android.volley.Request setCacheEntry(com.android.volley.Cache$Entry)
+    312:312:public com.android.volley.Cache$Entry getCacheEntry()
+    326:326:public boolean isCanceled()
+    336:336:public java.util.Map getHeaders()
+    352:352:protected java.util.Map getPostParams()
+    371:371:protected java.lang.String getPostParamsEncoding()
+    379:379:public java.lang.String getPostBodyContentType()
+    395:399:public byte[] getPostBody()
+    411:411:protected java.util.Map getParams()
+    427:427:protected java.lang.String getParamsEncoding()
+    434:434:public java.lang.String getBodyContentType()
+    447:451:public byte[] getBody()
+    458:468:private byte[] encodeParameters(java.util.Map,java.lang.String)
+    478:479:public final com.android.volley.Request setShouldCache(boolean)
+    513:513:public final int getTimeoutMs()
+    520:520:public com.android.volley.RetryPolicy getRetryPolicy()
+    528:529:public void markDelivered()
+    535:535:public boolean hasHadResponseDelivered()
+    protected abstract com.android.volley.Response parseNetworkResponse(com.android.volley.NetworkResponse)
+    557:557:protected com.android.volley.VolleyError parseNetworkError(com.android.volley.VolleyError)
+    protected abstract void deliverResponse(java.lang.Object)
+    576:579:public void deliverError(com.android.volley.VolleyError)
+    61:61:static synthetic com.android.volley.VolleyLog$MarkerLog access$1(com.android.volley.Request)
+com.android.volley.Request$1
+com.android.volley.Request$Method
+com.android.volley.RequestQueue:
+    private static final int DEFAULT_NETWORK_THREAD_POOL_SIZE
+    private final com.android.volley.Cache mCache
+    private final com.android.volley.Network mNetwork
+    private final com.android.volley.ResponseDelivery mDelivery
+    private com.android.volley.NetworkDispatcher[] mDispatchers
+    private com.android.volley.CacheDispatcher mCacheDispatcher
+    private java.util.List mFinishedListeners
+    108:114:public RequestQueue(com.android.volley.Cache,com.android.volley.Network,int,com.android.volley.ResponseDelivery)
+    124:126:public RequestQueue(com.android.volley.Cache,com.android.volley.Network,int)
+    135:136:public RequestQueue(com.android.volley.Cache,com.android.volley.Network)
+    142:154:public void start()
+    160:168:public void stop()
+    181:181:public com.android.volley.Cache getCache()
+    211:220:public void cancelAll(java.lang.Object)
+    277:301:void finish(com.android.volley.Request)
+    304:307:public void addRequestFinishedListener(com.android.volley.RequestQueue$RequestFinishedListener)
+    313:316:public void removeRequestFinishedListener(com.android.volley.RequestQueue$RequestFinishedListener)
+com.android.volley.RequestQueue$1
+com.android.volley.RequestQueue$RequestFinishedListener
+com.android.volley.Response:
+    public final java.lang.Object result
+    public final com.android.volley.Cache$Entry cacheEntry
+    public final com.android.volley.VolleyError error
+    public boolean intermediate
+    43:43:public static com.android.volley.Response success(java.lang.Object,com.android.volley.Cache$Entry)
+    51:51:public static com.android.volley.Response error(com.android.volley.VolleyError)
+    70:70:public boolean isSuccess()
+    74:78:private Response(java.lang.Object,com.android.volley.Cache$Entry)
+    80:84:private Response(com.android.volley.VolleyError)
+com.android.volley.Response$ErrorListener:
+    public abstract void onErrorResponse(com.android.volley.VolleyError)
+com.android.volley.Response$Listener:
+    public abstract void onResponse(java.lang.Object)
+com.android.volley.ResponseDelivery
+com.android.volley.RetryPolicy:
+    public abstract int getCurrentTimeout()
+    public abstract int getCurrentRetryCount()
+    public abstract void retry(com.android.volley.VolleyError)
+com.android.volley.ServerError
+com.android.volley.TimeoutError
+com.android.volley.VolleyError
+com.android.volley.VolleyLog:
+    46:51:public static void setTag(java.lang.String)
+    68:69:public static varargs void e(java.lang.Throwable,java.lang.String,java.lang.Object[])
+    72:73:public static varargs void wtf(java.lang.String,java.lang.Object[])
+    76:77:public static varargs void wtf(java.lang.Throwable,java.lang.String,java.lang.Object[])
+com.android.volley.VolleyLog$MarkerLog:
+    private static final long MIN_DURATION_FOR_LOGGING_MS
+com.android.volley.toolbox.AndroidAuthenticator
+com.android.volley.toolbox.Authenticator
+com.android.volley.toolbox.BasicNetwork
+com.android.volley.toolbox.ByteArrayPool
+com.android.volley.toolbox.ByteArrayPool$1
+com.android.volley.toolbox.ClearCacheRequest
+com.android.volley.toolbox.DiskBasedCache
+com.android.volley.toolbox.DiskBasedCache$CacheHeader
+com.android.volley.toolbox.DiskBasedCache$CountingInputStream
+com.android.volley.toolbox.HttpClientStack
+com.android.volley.toolbox.HttpClientStack$HttpPatch
+com.android.volley.toolbox.HttpHeaderParser
+com.android.volley.toolbox.HttpStack
+com.android.volley.toolbox.HurlStack
+com.android.volley.toolbox.HurlStack$UrlRewriter
+com.android.volley.toolbox.ImageLoader:
+    private int mBatchResponseDelayMs
+    private final android.os.Handler mHandler
+    private java.lang.Runnable mRunnable
+    84:87:public ImageLoader(com.android.volley.RequestQueue,com.android.volley.toolbox.ImageLoader$ImageCache)
+    99:99:public static com.android.volley.toolbox.ImageLoader$ImageListener getImageListener(android.widget.ImageView,int,int)
+    153:153:public boolean isCached(java.lang.String,int,int)
+    166:169:public boolean isCached(java.lang.String,int,int,android.widget.ImageView$ScaleType)
+    182:182:public com.android.volley.toolbox.ImageLoader$ImageContainer get(java.lang.String,com.android.volley.toolbox.ImageLoader$ImageListener)
+    191:191:public com.android.volley.toolbox.ImageLoader$ImageContainer get(java.lang.String,com.android.volley.toolbox.ImageLoader$ImageListener,int,int)
+    271:272:public void setBatchedResponseDelay(int)
+    281:293:protected void onGetImageSuccess(java.lang.String,android.graphics.Bitmap)
+    302:311:protected void onGetImageError(java.lang.String,com.android.volley.VolleyError)
+    457:488:private void batchResponse(java.lang.String,com.android.volley.toolbox.ImageLoader$BatchedImageRequest)
+    67:67:static synthetic void access$2(com.android.volley.toolbox.ImageLoader,java.lang.Runnable)
+com.android.volley.toolbox.ImageLoader$1
+com.android.volley.toolbox.ImageLoader$2:
+    255:256:public void onResponse(android.graphics.Bitmap)
+    1:1:public bridge synthetic void onResponse(java.lang.Object)
+com.android.volley.toolbox.ImageLoader$3:
+    260:261:public void onErrorResponse(com.android.volley.VolleyError)
+com.android.volley.toolbox.ImageLoader$4
+com.android.volley.toolbox.ImageLoader$BatchedImageRequest:
+    private android.graphics.Bitmap mResponseBitmap
+    private com.android.volley.VolleyError mError
+    417:418:public void setError(com.android.volley.VolleyError)
+    424:424:public com.android.volley.VolleyError getError()
+    395:395:static synthetic void access$1(com.android.volley.toolbox.ImageLoader$BatchedImageRequest,android.graphics.Bitmap)
+    395:395:static synthetic android.graphics.Bitmap access$2(com.android.volley.toolbox.ImageLoader$BatchedImageRequest)
+com.android.volley.toolbox.ImageLoader$ImageCache:
+    public abstract void putBitmap(java.lang.String,android.graphics.Bitmap)
+com.android.volley.toolbox.ImageLoader$ImageContainer:
+    323:323:static synthetic com.android.volley.toolbox.ImageLoader$ImageListener access$0(com.android.volley.toolbox.ImageLoader$ImageContainer)
+    321:321:static synthetic void access$1(com.android.volley.toolbox.ImageLoader$ImageContainer,android.graphics.Bitmap)
+com.android.volley.toolbox.ImageRequest:
+    private static final int IMAGE_TIMEOUT_MS
+    private static final int IMAGE_MAX_RETRIES
+    private static final float IMAGE_BACKOFF_MULT
+    91:93:public ImageRequest(java.lang.String,com.android.volley.Response$Listener,int,int,android.graphics.Bitmap$Config,com.android.volley.Response$ErrorListener)
+    115:151:private static int getResizedDimension(int,int,int,int,android.widget.ImageView$ScaleType)
+    157:157:protected com.android.volley.Response parseNetworkResponse(com.android.volley.NetworkResponse)
+    171:213:private com.android.volley.Response doParse(com.android.volley.NetworkResponse)
+    219:220:protected void deliverResponse(android.graphics.Bitmap)
+    234:242:static int findBestSampleSize(int,int,int,int)
+    1:1:protected bridge synthetic void deliverResponse(java.lang.Object)
+com.android.volley.toolbox.JsonArrayRequest
+com.android.volley.toolbox.JsonObjectRequest
+com.android.volley.toolbox.JsonRequest
+com.android.volley.toolbox.NetworkImageView:
+    44:44:static synthetic int access$0(com.android.volley.toolbox.NetworkImageView)
+com.android.volley.toolbox.NetworkImageView$1:
+    154:157:public void onErrorResponse(com.android.volley.VolleyError)
+com.android.volley.toolbox.NoCache
+com.android.volley.toolbox.PoolingByteArrayOutputStream
+com.android.volley.toolbox.RequestFuture
+com.android.volley.toolbox.StringRequest
+com.android.volley.toolbox.Volley
+com.curry.vendingmachine.AppStatus
+com.curry.vendingmachine.BuildConfig
+com.curry.vendingmachine.MainActivity:
+    public static final int MIN_CLICK_DELAY_TIME
+    public static final long UP_LOAD_TIME
+    312:314:private void saveInitGprsSuc()
+com.curry.vendingmachine.R:
+    10:10:public R()
+com.curry.vendingmachine.SerialPortActivity:
+    327:336:private void DisplayError(int)
+com.curry.vendingmachine.SerialPortActivity$5
+com.curry.vendingmachine.base.BaseActivity:
+    37:39:public void executeRequest(com.android.volley.Request)
+    42:46:public com.android.volley.RequestQueue getRequestQueue()
+com.curry.vendingmachine.base.BaseFragment:
+    private com.android.volley.RequestQueue mQueue
+    18:20:public void executeRequest(com.android.volley.Request)
+    23:27:public com.android.volley.RequestQueue getRequestQueue()
+com.curry.vendingmachine.base.CommonBaseAdapter
+com.curry.vendingmachine.database.CurryContentProvider:
+    private static final int GOODS
+    private static final int SALERECORD
+    private static final int EQUIPSTATUS
+com.curry.vendingmachine.database.CurryDatabaseHelper:
+    private static final java.lang.String DB_NAME
+    private static final int DB_VERSION
+com.curry.vendingmachine.database.CurryDatabaseUtils:
+    16:16:public CurryDatabaseUtils()
+    44:48:public static void deleteGoods(com.curry.vendingmachine.bean.Goods)
+    91:91:public static android.database.Cursor querySaleRecord(com.curry.vendingmachine.bean.SaleRecord)
+    104:110:public static void updateSaleRecord(com.curry.vendingmachine.bean.SaleRecord)
+    119:123:public static void deleteSaleRecord(com.curry.vendingmachine.bean.SaleRecord)
+    164:164:public static android.database.Cursor queryEquipStatus(com.curry.vendingmachine.bean.EquipStatus)
+    172:172:public static android.database.Cursor queryEquipStatus()
+    177:183:public static void updateEquipStatus(com.curry.vendingmachine.bean.EquipStatus)
+    186:189:public static void insertEquipStatus(com.curry.vendingmachine.bean.EquipStatus)
+    192:197:public static void deleteEquipStatus(com.curry.vendingmachine.bean.EquipStatus)
+    200:202:public static void deleteEquipStatus()
+    205:217:private static android.content.ContentValues appendValues(com.curry.vendingmachine.bean.EquipStatus)
+    221:256:public static java.util.ArrayList getEquipStatus(android.database.Cursor)
+com.curry.vendingmachine.database.CurryTables:
+    public static final java.lang.String AUTHORITY
+    6:6:public CurryTables()
+com.curry.vendingmachine.database.CurryTables$EquipStatusTable
+com.curry.vendingmachine.database.CurryTables$GoodsTable:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String ID
+    public static final java.lang.String CAPACITY
+    public static final java.lang.String STOCK_NUM
+    public static final java.lang.String PRICE
+    public static final java.lang.String SQL_CREATE
+    10:10:public CurryTables$GoodsTable()
+com.curry.vendingmachine.database.CurryTables$SaleRecordTable:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String ID
+    public static final java.lang.String PRICE
+    public static final java.lang.String TIME
+    public static final java.lang.String SQL_CREATE
+    27:27:public CurryTables$SaleRecordTable()
+com.curry.vendingmachine.database.manager.EquipStatusTableManager
+com.curry.vendingmachine.database.manager.GoodsTableManager:
+    55:56:public void delete(com.curry.vendingmachine.bean.Goods)
+    59:60:public void clear()
+    63:68:public boolean isGoods()
+com.curry.vendingmachine.database.manager.SaleRecordTableManager:
+    26:32:private void save(java.util.ArrayList)
+    35:51:private void save(com.curry.vendingmachine.bean.SaleRecord)
+    60:62:public void saveAfterDeleteAll(java.util.ArrayList)
+    70:71:public void delete(com.curry.vendingmachine.bean.SaleRecord)
+    78:83:public boolean isSaleRecord()
+com.curry.vendingmachine.delegate.MainActivityDelegate
+com.curry.vendingmachine.gpio.Gpio:
+    public static final java.lang.String TAG
+    private static final java.lang.String mPathstr
+    private static final java.lang.String mDataName
+    private static final java.lang.String mPullName
+    private static final java.lang.String mDrvLevelName
+    private static final java.lang.String mMulSelName
+    44:46:public static int writeGpio(char,int,int)
+    50:52:public static int readGpio(char,int)
+    56:58:public static int setPull(char,int,int)
+    62:64:public static int getPull(char,int)
+    68:70:public static int setDrvLevel(char,int,int)
+    74:76:public static int getDrvLevel(char,int)
+    80:82:public static int setMulSel(char,int,int)
+    86:88:public static int getMulSel(char,int)
+    95:97:private static java.lang.String composePinPath(char,int)
+com.curry.vendingmachine.helper.BroadCastHelper:
+    130:132:public void sendBroadCastInitGprs(com.curry.vendingmachine.base.BaseActivity)
+    135:137:public void sendBroadCastInitGprsSuc(com.curry.vendingmachine.base.BaseActivity)
+com.curry.vendingmachine.helper.BroadCastHelper$Holder:
+    17:17:private BroadCastHelper$Holder()
+com.curry.vendingmachine.helper.ClockHelper$Holder:
+    33:33:private ClockHelper$Holder()
+com.curry.vendingmachine.helper.CoinValidatorHelper$Holder:
+    25:25:private CoinValidatorHelper$Holder()
+com.curry.vendingmachine.helper.EquipStatusHelper:
+    7:7:public EquipStatusHelper()
+com.curry.vendingmachine.helper.LockAndMotorHelper:
+    private static final int MOTOR_TIME_OUT
+com.curry.vendingmachine.helper.LockAndMotorHelper$Holder:
+    67:67:private LockAndMotorHelper$Holder()
+com.curry.vendingmachine.helper.PaperMoneyValidatorHelper:
+    public static final java.lang.String TAG_PAPER
+    public static final int PAPER_VALIDATOR_RUN_TIME
+com.curry.vendingmachine.helper.PaperMoneyValidatorHelper$Holder:
+    62:62:private PaperMoneyValidatorHelper$Holder()
+com.curry.vendingmachine.helper.SerialDataSendHelper$Holder:
+    18:18:private SerialDataSendHelper$Holder()
+com.curry.vendingmachine.manager.focus.BaseFocusManager:
+    public abstract void moveUp()
+    public abstract void moveDown()
+    public abstract void moveLeft()
+    public abstract void moveRight()
+    public abstract void confirm()
+    public abstract void cancel()
+com.curry.vendingmachine.manager.focus.DateSettingFocusManager:
+    20:21:public void setSecSetted(boolean)
+com.curry.vendingmachine.manager.focus.EnvSettingsFocusManager:
+    19:20:public void setCurrentFocus(int)
+com.curry.vendingmachine.manager.focus.ListViewFocusManager:
+    25:26:public void setFocusOnEdit(boolean)
+com.curry.vendingmachine.manager.focus.MotorStatusDetailFocusManager:
+    37:37:public void moveLeft()
+    43:43:public void moveRight()
+    49:49:public void confirm()
+    55:55:public void cancel()
+com.curry.vendingmachine.manager.focus.PathSettingFocusManager:
+    139:139:public void moveLeft()
+    145:145:public void moveRight()
+    151:151:public void confirm()
+com.curry.vendingmachine.manager.focus.PaySettingFocusManager:
+    194:194:public void cancel()
+com.curry.vendingmachine.manager.focus.ViewFocusManager:
+    public static final int DIRECTION_LEFT
+    public static final int DIRECTION_RIGHT
+    public static final int DIRECTION_UP
+    public static final int DIRECTION_DOWN
+    public static final int FOCUS_FIRST
+    public static final int FOCUS_SECOND
+    public static final int FOCUS_THREE
+    public static final int FOCUS_FOUR
+    public static final int FOCUS_FIVE
+    public static final int FOCUS_SIX
+    public static final int FOCUS_SEVEN
+    public static final int FOCUS_EIGHT
+    public static final int FOCUS_NINE
+    public static final int FOCUS_TEN
+    48:48:public int getCurrentFocus()
+com.curry.vendingmachine.modules.DateSettingActivity:
+    117:127:private varargs void setSystemTime(java.lang.String[])
+com.curry.vendingmachine.modules.PayActivity:
+    420:453:private void getPayStatus()
+    557:586:private void getData()
+com.curry.vendingmachine.modules.PayActivity$10
+com.curry.vendingmachine.modules.PayActivity$14
+com.curry.vendingmachine.modules.PayActivity$15
+com.curry.vendingmachine.modules.PayActivity$9
+com.curry.vendingmachine.modules.settings.stock.ListSettingActivity:
+    public static final java.lang.String TYPE_CAPACITY
+    public static final java.lang.String TYPE_SINGLE_STOCK
+    public static final java.lang.String TYPE_PRICE
+com.curry.vendingmachine.net.HttpFactory:
+    20:20:public HttpFactory()
+com.curry.vendingmachine.net.HttpNeedle:
+    107:115:private void initGprsNeedlely(java.io.OutputStream)
+    505:507:private void initGprsStep3()
+com.curry.vendingmachine.net.HttpNeedle$2
+com.curry.vendingmachine.net.HttpNeedle$Holder:
+    61:61:private HttpNeedle$Holder()
+com.curry.vendingmachine.net.ServerConstants:
+    public static final java.lang.String SERVER_URL_DOMAIN
+    public static final java.lang.String SERVER_SUCCESS
+    public static final java.lang.String PAY_STATUS_HAS_PAY
+    public static final java.lang.String ACTION_SCANPAY
+    public static final java.lang.String ACTION_STATUS
+    public static final java.lang.String ACTION_SHELF
+    public static final java.lang.String ACTION_DELIVERY
+    public static final java.lang.String ACTION_CASHPAY
+    public static final java.lang.String ACTION_VIDEO
+    public static final java.lang.String ACTION_PAY_STATUS
+    6:6:public ServerConstants()
+com.curry.vendingmachine.net.needle.AbstractCancelableRunnable:
+    9:10:public void cancel()
+com.curry.vendingmachine.net.needle.BackgroundThreadExecutor:
+    public abstract com.curry.vendingmachine.net.needle.BackgroundThreadExecutor withThreadPoolSize(int)
+com.curry.vendingmachine.net.needle.CancelableRunnable:
+    public abstract void cancel()
+    public abstract boolean isCanceled()
+com.curry.vendingmachine.net.needle.CancelableTask
+com.curry.vendingmachine.net.needle.Needle:
+    public static final int DEFAULT_POOL_SIZE
+    public static final java.lang.String DEFAULT_TASK_TYPE
+    19:19:public Needle()
+com.curry.vendingmachine.net.needle.UiRelatedProgressTask
+com.curry.vendingmachine.net.needle.UiRelatedProgressTask$1
+com.curry.vendingmachine.net.needle.UiRelatedTask:
+    1:1:public bridge synthetic void cancel()
+com.curry.vendingmachine.net.volley.GsonRequest
+com.curry.vendingmachine.net.volley.GsonRequest$1
+com.curry.vendingmachine.net.volley.GsonRequest$2
+com.curry.vendingmachine.net.volley.GsonRequest$3
+com.curry.vendingmachine.net.volley.RequestFactory
+com.curry.vendingmachine.percent.PercentFrameLayout$LayoutParams:
+    110:111:public PercentFrameLayout$LayoutParams(int,int)
+    114:115:public PercentFrameLayout$LayoutParams(int,int,int)
+    118:119:public PercentFrameLayout$LayoutParams(android.view.ViewGroup$LayoutParams)
+    122:123:public PercentFrameLayout$LayoutParams(android.view.ViewGroup$MarginLayoutParams)
+    126:128:public PercentFrameLayout$LayoutParams(android.widget.FrameLayout$LayoutParams)
+    131:133:public PercentFrameLayout$LayoutParams(com.curry.vendingmachine.percent.PercentFrameLayout$LayoutParams)
+com.curry.vendingmachine.percent.PercentLayoutHelper:
+    private static final java.lang.String TAG
+    private static final java.lang.String REGEX_PERCENT
+com.curry.vendingmachine.percent.PercentLayoutHelper$PercentLayoutInfo$BASEMODE:
+    public static final java.lang.String PERCENT
+    public static final java.lang.String W
+    public static final java.lang.String H
+    public static final java.lang.String SW
+    public static final java.lang.String SH
+com.curry.vendingmachine.percent.PercentLayoutHelper$PercentLayoutInfo$PercentVal:
+    785:789:public PercentLayoutHelper$PercentLayoutInfo$PercentVal(float,com.curry.vendingmachine.percent.PercentLayoutHelper$PercentLayoutInfo$BASEMODE)
+com.curry.vendingmachine.percent.PercentLinearLayout:
+    private static final java.lang.String TAG
+com.curry.vendingmachine.percent.PercentLinearLayout$LayoutParams:
+    123:124:public PercentLinearLayout$LayoutParams(int,int)
+    129:130:public PercentLinearLayout$LayoutParams(android.view.ViewGroup$LayoutParams)
+    134:135:public PercentLinearLayout$LayoutParams(android.view.ViewGroup$MarginLayoutParams)
+com.curry.vendingmachine.percent.PercentRelativeLayout$LayoutParams:
+    110:111:public PercentRelativeLayout$LayoutParams(int,int)
+    114:115:public PercentRelativeLayout$LayoutParams(android.view.ViewGroup$LayoutParams)
+    118:119:public PercentRelativeLayout$LayoutParams(android.view.ViewGroup$MarginLayoutParams)
+com.curry.vendingmachine.qrcode.QRCodeEncoder:
+    private static final int WHITE
+    private static final int BLACK
+com.curry.vendingmachine.serialport.SerialPortCommands
+com.curry.vendingmachine.serialport.SerialPortContants
+com.curry.vendingmachine.serialport.SerialPortKeys
+com.curry.vendingmachine.timer.DelayMinTimer:
+    21:24:public DelayMinTimer(com.curry.vendingmachine.timer.DelayMinTimer$OnTimeToFinishActivityListener,long)
+    33:34:public void setPayDelay(long)
+com.curry.vendingmachine.timer.DelayMinTimerSingleInstance:
+    33:35:public void init(com.curry.vendingmachine.timer.DelayMinTimerSingleInstance$OnTimeToFinishActivitySingleListener,long)
+    43:44:public void setPayDelay(long)
+com.curry.vendingmachine.timer.DelayMinTimerSingleInstance$Holder:
+    21:21:private DelayMinTimerSingleInstance$Holder()
+com.curry.vendingmachine.utils.ActivityStack:
+    57:64:public boolean has(java.lang.Class)
+    68:77:public void finishActivity(java.lang.Class)
+    84:84:public android.app.Activity currentActivity()
+    92:102:public void finishAllActivityUntilCls(boolean)
+    105:105:public int size()
+com.curry.vendingmachine.utils.C:
+    5:5:public C()
+com.curry.vendingmachine.utils.Constants:
+    public static final int PAY_TYPE_PAPER
+    public static final int PAY_TYPE_COIN
+    public static final int CASH_TYPE_IN
+    public static final int CASH_TYPE_OUT
+    public static final int GOODS_NUM_MAX
+    public static final java.lang.String CAPACITY_AND_STOCK_MAX
+    public static final java.lang.String NEEDLE_TYPE_HTTP
+    public static final java.lang.String NEEDLE_TYPE_PAPER
+    public static final java.lang.String NEEDLE_TYPE_COIN
+    public static final java.lang.String NEEDLE_TYPE_DATABASE_GOODS
+    public static final java.lang.String NEEDLE_TYPE_DATABASE_SALE_RECORD
+    public static final java.lang.String NEEDLE_TYPE_DATABASE_EQUIP_STATUS
+    public static final java.lang.String NEEDLE_TYPE_LOG
+    public static final java.lang.String NEEDLE_TYPE_SHIP
+    public static final java.lang.String NEEDLE_TYPE_DATE_SET
+    public static final java.lang.String NEEDLE_TYPE_ENCODE_QR_CODE
+    public static final java.lang.String BUNDLE_KEY_STOCK_TYPE
+    public static final java.lang.String BUNDLE_KEY_GOODS_NUM
+    public static final java.lang.String BUNDLE_KEY_NEED_PRICE
+    public static final java.lang.String BUNDLE_KEY_PAPER_VALUE
+    public static final java.lang.String BUNDLE_KEY_CHANGE_PAPER_NUM
+    public static final java.lang.String BUNDLE_KEY_CHANGE_COIN_NUM
+    public static final java.lang.String BUNDLE_KEY_CHANGE_ALREADY_NUM
+    public static final java.lang.String BUNDLE_KEY_CHANGE_REAL_COIN_NUM
+    public static final java.lang.String BUNDLE_KEY_RECEIVED_BYTE_BUFFER
+    public static final java.lang.String BUNDLE_KEY_RECEIVED_BYTE_SIZE
+    public static final java.lang.String BUNDLE_KEY_RECEIVED_PAPER_MONEY
+    public static final java.lang.String BUNDLE_KEY_RECEIVED_PAPER_AMOUNT
+    public static final java.lang.String BUNDLE_KEY_RECEIVED_COIN_STAUTS
+    public static final java.lang.String BUNDLE_KEY_MOTOR_STATUS_SUC_LIST
+    public static final java.lang.String ACTION_INIT_GPRS
+    public static final java.lang.String ACTION_INIT_GPRS_SUC
+    public static final java.lang.String ACTION_KEYBOARD_RECEIVED
+    public static final java.lang.String ACTION_PAPER_MONEY_RECEIVED
+    public static final java.lang.String ACTION_DELIVERY_GOODS
+    public static final java.lang.String ACTION_COIN_QUERY_STATUS
+    public static final java.lang.String ACTION_RETURN_CHANGE_START
+    public static final java.lang.String ACTION_RETURN_CHANGE_FINISH
+    public static final java.lang.String ACTION_RETURN_CHANGE_FAILED
+    public static final java.lang.String ACTION_RETURN_CHANGE_SINGLE
+    public static final java.lang.String ACTION_RETURN_CHANGE_REAL_COIN_NUM
+    public static final java.lang.String ACTION_DELIVER_SUC
+    public static final java.lang.String ACTION_DELIVER_FAIL
+    public static final java.lang.String ACTION_PAPER_AMOUNT
+    public static final java.lang.String ACTION_PAPER_VALIDATOR_ERROR
+    public static final java.lang.String ACTION_COIN_STATUS_RECEIVED
+    public static final java.lang.String PREFERENCE_KEY_IS_HTTP_ACT
+    public static final java.lang.String PREFERENCE_KEY_PAPER_VALUE
+    public static final java.lang.String PREFERENCE_KEY_SERVER_IP
+    public static final java.lang.String PREFERENCE_KEY_SERVER_PORT
+    public static final java.lang.String PREFERENCE_KEY_EQUIP_ID
+    public static final java.lang.String PREFERENCE_KEY_LOCK_AND_MOTOR_SUC_LIST
+    public static final java.lang.String PREFERENCE_KEY_IS_QR_CODE_ENABLE
+    public static final java.lang.String PREFERENCE_KEY_QR_CODE_DISCOUNT
+    public static final java.lang.String PREFERENCE_KEY_EQUIP_STATUS
+    public static final java.lang.String PREFERENCE_KEY_SALE_TOTAL
+    3:3:public Constants()
+com.curry.vendingmachine.utils.CrashHandler:
+    public static final java.lang.String TAG
+    116:124:private void exitApp()
+com.curry.vendingmachine.utils.CrashHandler$Holder:
+    53:53:private CrashHandler$Holder()
+com.curry.vendingmachine.utils.CurryUtils:
+    11:11:public CurryUtils()
+    13:18:public static java.util.Map getDefaultHeaders()
+com.curry.vendingmachine.utils.DeviceUtils:
+    5:5:public DeviceUtils()
+    9:12:public static int getVersionCode(android.content.Context)
+com.curry.vendingmachine.utils.EditUtils:
+    5:5:public EditUtils()
+com.curry.vendingmachine.utils.Env:
+    3:3:public Env()
+com.curry.vendingmachine.utils.InputObtainTextUtil:
+    5:5:public InputObtainTextUtil()
+com.curry.vendingmachine.utils.IntentUtils:
+    7:7:public IntentUtils()
+com.curry.vendingmachine.utils.L:
+    public static final java.lang.String TAG
+    20:20:public L()
+    57:60:public static void i(java.lang.Object)
+    63:66:public static void v(java.lang.String,java.lang.Object)
+    69:72:public static void v(java.lang.Object)
+    76:79:public static void w(java.lang.String,java.lang.Object)
+    82:85:public static void w(java.lang.Object)
+    88:91:public static void volleyError(com.android.volley.VolleyError)
+com.curry.vendingmachine.utils.LoadingDialog:
+    public static final int PROGRESS_MODE
+    public static final int ICON_MODE
+    38:42:public LoadingDialog(android.content.Context,int,int)
+    91:95:public static com.curry.vendingmachine.utils.LoadingDialog show(android.content.Context,java.lang.CharSequence,java.lang.CharSequence)
+    101:107:public static com.curry.vendingmachine.utils.LoadingDialog show(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,boolean,boolean,android.content.DialogInterface$OnCancelListener)
+    112:112:public void setIndeterminate(boolean)
+com.curry.vendingmachine.utils.MD5:
+    10:10:public MD5()
+    13:28:public static final java.lang.String getMessageDigest(byte[])
+    65:107:public static final java.lang.String getMD5String(java.io.File)
+com.curry.vendingmachine.utils.NameValuePair:
+    94:95:public void setName(java.lang.String)
+    115:116:public void setValue(java.lang.String)
+com.curry.vendingmachine.utils.ObjectSerializer:
+    27:27:public ObjectSerializer()
+com.curry.vendingmachine.utils.PreferenceHelper:
+    9:9:public PreferenceHelper()
+    27:29:public static void setLong(java.lang.String,long)
+    32:34:public static void setFloat(java.lang.String,float)
+    52:52:public static long getLong(java.lang.String,long)
+    57:57:public static float getFloat(java.lang.String,float)
+    84:86:public static void remove(java.lang.String)
+com.curry.vendingmachine.utils.TimeTextWatcher:
+    public static final int TYPE_HOUR
+    public static final int TYPE_MIN
+    public static final int TYPE_SEC
+    public static final int TYPE_YEAR
+    public static final int TYPE_MONTH
+    public static final int TYPE_DAY
+com.curry.vendingmachine.utils.TimeUtils:
+    8:8:public TimeUtils()
+    63:63:public static java.lang.String getSec()
+com.curry.vendingmachine.utils.ToastHelper:
+    6:6:public ToastHelper()
+    13:13:public static android.widget.Toast showLongToast(int)
+    21:21:public static android.widget.Toast showLongToast(java.lang.String)
+com.curry.vendingmachine.utils.TypeUtil:
+    3:3:public TypeUtil()
+com.google.zxing.Binarizer
+com.google.zxing.BinaryBitmap
+com.google.zxing.ChecksumException
+com.google.zxing.DecodeHintType
+com.google.zxing.Dimension:
+    27:33:public Dimension(int,int)
+com.google.zxing.FormatException:
+    37:38:private FormatException(java.lang.Throwable)
+    45:45:public static com.google.zxing.FormatException getFormatInstance(java.lang.Throwable)
+com.google.zxing.InvertedLuminanceSource
+com.google.zxing.LuminanceSource
+com.google.zxing.MultiFormatReader
+com.google.zxing.MultiFormatWriter:
+    47:47:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.NotFoundException
+com.google.zxing.PlanarYUVLuminanceSource
+com.google.zxing.RGBLuminanceSource
+com.google.zxing.Reader
+com.google.zxing.ReaderException:
+    38:39:ReaderException(java.lang.Throwable)
+com.google.zxing.Result
+com.google.zxing.ResultMetadataType
+com.google.zxing.ResultPoint
+com.google.zxing.ResultPointCallback
+com.google.zxing.Writer:
+    public abstract com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.aztec.AztecDetectorResult
+com.google.zxing.aztec.AztecReader
+com.google.zxing.aztec.AztecWriter:
+    35:35:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.aztec.decoder.Decoder
+com.google.zxing.aztec.decoder.Decoder$1
+com.google.zxing.aztec.decoder.Decoder$Table
+com.google.zxing.aztec.detector.Detector
+com.google.zxing.aztec.detector.Detector$Point
+com.google.zxing.aztec.encoder.AztecCode:
+    38:38:public boolean isCompact()
+    49:49:public int getSize()
+    60:60:public int getLayers()
+    71:71:public int getCodeWords()
+com.google.zxing.aztec.encoder.Encoder:
+    public static final int DEFAULT_EC_PERCENT
+    public static final int DEFAULT_AZTEC_LAYERS
+    private static final int MAX_NB_BITS
+    private static final int MAX_NB_BITS_COMPACT
+    41:42:private Encoder()
+    51:51:public static com.google.zxing.aztec.encoder.AztecCode encode(byte[])
+com.google.zxing.aztec.encoder.HighLevelEncoder:
+    static final int MODE_UPPER
+    static final int MODE_LOWER
+    static final int MODE_DIGIT
+    static final int MODE_MIXED
+    static final int MODE_PUNCT
+com.google.zxing.aztec.encoder.State:
+    62:62:com.google.zxing.aztec.encoder.Token getToken()
+com.google.zxing.client.result.AbstractDoCoMoResultParser
+com.google.zxing.client.result.AddressBookAUResultParser
+com.google.zxing.client.result.AddressBookDoCoMoResultParser
+com.google.zxing.client.result.AddressBookParsedResult
+com.google.zxing.client.result.BizcardResultParser
+com.google.zxing.client.result.BookmarkDoCoMoResultParser
+com.google.zxing.client.result.CalendarParsedResult
+com.google.zxing.client.result.EmailAddressParsedResult
+com.google.zxing.client.result.EmailAddressResultParser
+com.google.zxing.client.result.EmailDoCoMoResultParser
+com.google.zxing.client.result.ExpandedProductParsedResult
+com.google.zxing.client.result.ExpandedProductResultParser
+com.google.zxing.client.result.GeoParsedResult
+com.google.zxing.client.result.GeoResultParser
+com.google.zxing.client.result.ISBNParsedResult
+com.google.zxing.client.result.ISBNResultParser
+com.google.zxing.client.result.ParsedResult
+com.google.zxing.client.result.ParsedResultType
+com.google.zxing.client.result.ProductParsedResult
+com.google.zxing.client.result.ProductResultParser
+com.google.zxing.client.result.ResultParser
+com.google.zxing.client.result.SMSMMSResultParser
+com.google.zxing.client.result.SMSParsedResult
+com.google.zxing.client.result.SMSTOMMSTOResultParser
+com.google.zxing.client.result.SMTPResultParser
+com.google.zxing.client.result.TelParsedResult
+com.google.zxing.client.result.TelResultParser
+com.google.zxing.client.result.TextParsedResult
+com.google.zxing.client.result.URIParsedResult
+com.google.zxing.client.result.URIResultParser
+com.google.zxing.client.result.URLTOResultParser
+com.google.zxing.client.result.VCardResultParser
+com.google.zxing.client.result.VEventResultParser
+com.google.zxing.client.result.VINParsedResult
+com.google.zxing.client.result.VINResultParser
+com.google.zxing.client.result.WifiParsedResult
+com.google.zxing.client.result.WifiResultParser
+com.google.zxing.common.BitArray:
+    36:39:public BitArray(int)
+    77:78:public void set(int)
+    86:87:public void flip(int)
+    96:110:public int getNextSet(int)
+    119:133:public int getNextUnset(int)
+    144:145:public void setBulk(int,int)
+    154:177:public void setRange(int,int)
+    183:187:public void clear()
+    199:227:public boolean isRange(int,int,boolean)
+    301:301:public int[] getBitArray()
+    308:338:public void reverse()
+com.google.zxing.common.BitMatrix:
+    66:119:public static com.google.zxing.common.BitMatrix parse(java.lang.String,java.lang.String,java.lang.String)
+    146:148:public void unset(int,int)
+    157:159:public void flip(int,int)
+    168:180:public void xor(com.google.zxing.common.BitMatrix)
+    229:238:public com.google.zxing.common.BitArray getRow(int,com.google.zxing.common.BitArray)
+    246:247:public void setRow(int,com.google.zxing.common.BitArray)
+    253:265:public void rotate180()
+    273:317:public int[] getEnclosingRectangle()
+    326:342:public int[] getTopLeftOnBit()
+    346:364:public int[] getBottomRightOnBit()
+    385:385:public int getRowSize()
+com.google.zxing.common.BitSource
+com.google.zxing.common.CharacterSetECI:
+    103:106:public static com.google.zxing.common.CharacterSetECI getCharacterSetECIByValue(int)
+com.google.zxing.common.DecoderResult
+com.google.zxing.common.DefaultGridSampler
+com.google.zxing.common.DetectorResult
+com.google.zxing.common.GlobalHistogramBinarizer
+com.google.zxing.common.GridSampler
+com.google.zxing.common.HybridBinarizer
+com.google.zxing.common.PerspectiveTransform
+com.google.zxing.common.StringUtils
+com.google.zxing.common.detector.MathUtils
+com.google.zxing.common.detector.MonochromeRectangleDetector
+com.google.zxing.common.detector.WhiteRectangleDetector
+com.google.zxing.common.reedsolomon.GenericGF:
+    89:89:com.google.zxing.common.reedsolomon.GenericGFPoly getOne()
+    154:154:public int getSize()
+com.google.zxing.common.reedsolomon.GenericGFPoly:
+    98:115:int evaluateAt(int)
+    171:182:com.google.zxing.common.reedsolomon.GenericGFPoly multiply(int)
+com.google.zxing.common.reedsolomon.ReedSolomonDecoder
+com.google.zxing.common.reedsolomon.ReedSolomonException
+com.google.zxing.datamatrix.DataMatrixReader
+com.google.zxing.datamatrix.DataMatrixWriter:
+    43:43:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.datamatrix.decoder.BitMatrixParser
+com.google.zxing.datamatrix.decoder.DataBlock
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$1
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser$Mode
+com.google.zxing.datamatrix.decoder.Decoder
+com.google.zxing.datamatrix.decoder.Version
+com.google.zxing.datamatrix.decoder.Version$1
+com.google.zxing.datamatrix.decoder.Version$ECB
+com.google.zxing.datamatrix.decoder.Version$ECBlocks
+com.google.zxing.datamatrix.detector.Detector
+com.google.zxing.datamatrix.detector.Detector$1
+com.google.zxing.datamatrix.detector.Detector$ResultPointsAndTransitions
+com.google.zxing.datamatrix.detector.Detector$ResultPointsAndTransitionsComparator
+com.google.zxing.datamatrix.encoder.DefaultPlacement:
+    47:47:final int getNumrows()
+    51:51:final int getNumcols()
+    55:55:final byte[] getBits()
+com.google.zxing.datamatrix.encoder.Encoder:
+    public abstract int getEncodingMode()
+com.google.zxing.datamatrix.encoder.EncoderContext:
+    74:74:public char getCurrent()
+com.google.zxing.datamatrix.encoder.ErrorCorrection:
+    private static final int MODULO_VALUE
+    91:92:private ErrorCorrection()
+com.google.zxing.datamatrix.encoder.HighLevelEncoder:
+    private static final char PAD
+    static final char LATCH_TO_C40
+    static final char LATCH_TO_BASE256
+    static final char UPPER_SHIFT
+    private static final char MACRO_05
+    private static final char MACRO_06
+    static final char LATCH_TO_ANSIX12
+    static final char LATCH_TO_TEXT
+    static final char LATCH_TO_EDIFACT
+    static final char C40_UNLATCH
+    static final char X12_UNLATCH
+    private static final java.lang.String MACRO_05_HEADER
+    private static final java.lang.String MACRO_06_HEADER
+    private static final java.lang.String MACRO_TRAILER
+    static final int ASCII_ENCODATION
+    static final int C40_ENCODATION
+    static final int TEXT_ENCODATION
+    static final int X12_ENCODATION
+    static final int EDIFACT_ENCODATION
+    static final int BASE256_ENCODATION
+    111:112:private HighLevelEncoder()
+    142:142:public static java.lang.String encodeHighLevel(java.lang.String)
+com.google.zxing.datamatrix.encoder.SymbolInfo:
+    72:73:public static void overrideSymbolSet(com.google.zxing.datamatrix.encoder.SymbolInfo[])
+    104:104:public static com.google.zxing.datamatrix.encoder.SymbolInfo lookup(int)
+    108:108:public static com.google.zxing.datamatrix.encoder.SymbolInfo lookup(int,com.google.zxing.datamatrix.encoder.SymbolShapeHint)
+    112:114:public static com.google.zxing.datamatrix.encoder.SymbolInfo lookup(int,boolean,boolean)
+    118:118:private static com.google.zxing.datamatrix.encoder.SymbolInfo lookup(int,com.google.zxing.datamatrix.encoder.SymbolShapeHint,boolean)
+    206:206:public int getCodewordCount()
+com.google.zxing.maxicode.MaxiCodeReader
+com.google.zxing.maxicode.decoder.BitMatrixParser
+com.google.zxing.maxicode.decoder.DecodedBitStreamParser
+com.google.zxing.maxicode.decoder.Decoder
+com.google.zxing.multi.ByQuadrantReader
+com.google.zxing.multi.GenericMultipleBarcodeReader
+com.google.zxing.multi.MultipleBarcodeReader
+com.google.zxing.multi.qrcode.QRCodeMultiReader
+com.google.zxing.multi.qrcode.QRCodeMultiReader$1
+com.google.zxing.multi.qrcode.QRCodeMultiReader$SAComparator
+com.google.zxing.multi.qrcode.detector.MultiDetector
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$1
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$ModuleSizeComparator
+com.google.zxing.oned.CodaBarReader:
+    private static final float MAX_ACCEPTABLE
+    private static final float PADDING
+    private static final java.lang.String ALPHABET_STRING
+    private static final int MIN_CHARACTER_LENGTH
+    private final java.lang.StringBuilder decodeRowResult
+    private int[] counters
+    private int counterLength
+    73:77:public CodaBarReader()
+    82:156:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+    166:222:void validatePattern(int)
+    231:251:private void setCounters(com.google.zxing.common.BitArray)
+    254:261:private void counterAppend(int)
+    264:278:private int findStartPattern()
+    294:342:private int toNarrowWidePattern(int)
+com.google.zxing.oned.Code128Reader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private static final int CODE_SHIFT
+    private static final int CODE_CODE_C
+    private static final int CODE_CODE_B
+    private static final int CODE_CODE_A
+    private static final int CODE_FNC_1
+    private static final int CODE_FNC_2
+    private static final int CODE_FNC_3
+    private static final int CODE_FNC_4_A
+    private static final int CODE_FNC_4_B
+    private static final int CODE_START_A
+    private static final int CODE_START_B
+    private static final int CODE_START_C
+    private static final int CODE_STOP
+    37:37:public Code128Reader()
+    170:211:private static int[] findStartPattern(com.google.zxing.common.BitArray)
+    216:231:private static int decodeCode(com.google.zxing.common.BitArray,int[],int)
+    239:530:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+com.google.zxing.oned.Code128Writer:
+    private static final int CODE_START_B
+    private static final int CODE_START_C
+    private static final int CODE_CODE_B
+    private static final int CODE_CODE_C
+    private static final int CODE_STOP
+    private static final char ESCAPE_FNC_1
+    private static final char ESCAPE_FNC_2
+    private static final char ESCAPE_FNC_3
+    private static final char ESCAPE_FNC_4
+    private static final int CODE_FNC_1
+    private static final int CODE_FNC_2
+    private static final int CODE_FNC_3
+    private static final int CODE_FNC_4_B
+com.google.zxing.oned.Code39Reader:
+    static final java.lang.String ALPHABET_STRING
+    private final boolean usingCheckDigit
+    private final boolean extendedMode
+    private final java.lang.StringBuilder decodeRowResult
+    private final int[] counters
+    67:68:public Code39Reader()
+    78:79:public Code39Reader(boolean)
+    91:96:public Code39Reader(boolean,boolean)
+    102:169:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+    180:210:private static int[] findAsteriskPattern(com.google.zxing.common.BitArray,int[])
+    216:255:private static int toNarrowWidePattern(int[])
+    259:264:private static char patternToChar(int)
+    268:320:private static java.lang.String decodeExtended(java.lang.CharSequence)
+com.google.zxing.oned.Code93Reader
+com.google.zxing.oned.EAN13Reader:
+    private final int[] decodeMiddleCounters
+    67:69:public EAN13Reader()
+    75:109:protected int decodeMiddle(com.google.zxing.common.BitArray,int[],java.lang.StringBuilder)
+    114:114:com.google.zxing.BarcodeFormat getBarcodeFormat()
+    129:135:private static void determineFirstDigit(java.lang.StringBuilder,int)
+com.google.zxing.oned.EAN13Writer:
+    private static final int CODE_WIDTH
+com.google.zxing.oned.EAN8Reader
+com.google.zxing.oned.EAN8Writer:
+    private static final int CODE_WIDTH
+com.google.zxing.oned.EANManufacturerOrgSupport
+com.google.zxing.oned.ITFReader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private static final int W
+    private static final int N
+    private int narrowLineWidth
+    45:57:public ITFReader()
+    89:126:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+    150:174:private static void decodeMiddle(com.google.zxing.common.BitArray,int,int,java.lang.StringBuilder)
+    185:195:int[] decodeStart(com.google.zxing.common.BitArray)
+    215:230:private void validateQuietZone(com.google.zxing.common.BitArray,int)
+    240:246:private static int skipWhiteSpace(com.google.zxing.common.BitArray)
+    261:281:int[] decodeEnd(com.google.zxing.common.BitArray)
+    297:324:private static int[] findGuardPattern(com.google.zxing.common.BitArray,int,int[])
+    336:350:private static int decodeDigit(int[])
+com.google.zxing.oned.MultiFormatOneDReader
+com.google.zxing.oned.MultiFormatUPCEANReader
+com.google.zxing.oned.OneDReader:
+    42:42:public OneDReader()
+    46:46:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+    54:79:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap,java.util.Map)
+    87:87:public void reset()
+    105:174:private com.google.zxing.Result doDecode(com.google.zxing.BinaryBitmap,java.util.Map)
+    193:221:protected static void recordPattern(com.google.zxing.common.BitArray,int,int[])
+    226:238:protected static void recordPatternInReverse(com.google.zxing.common.BitArray,int,int[])
+    253:279:protected static float patternMatchVariance(int[],int[],float)
+    public abstract com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+com.google.zxing.oned.OneDimensionalCodeWriter:
+    37:37:public final com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.oned.UPCAReader
+com.google.zxing.oned.UPCAWriter:
+    39:39:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.oned.UPCEANExtension2Support
+com.google.zxing.oned.UPCEANExtension5Support
+com.google.zxing.oned.UPCEANExtensionSupport
+com.google.zxing.oned.UPCEANReader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private final java.lang.StringBuilder decodeRowStringBuffer
+    private final com.google.zxing.oned.UPCEANExtensionSupport extensionReader
+    private final com.google.zxing.oned.EANManufacturerOrgSupport eanManSupport
+    98:102:protected UPCEANReader()
+    105:122:static int[] findStartGuardPattern(com.google.zxing.common.BitArray)
+    128:128:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Map)
+    151:240:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,int[],java.util.Map)
+    249:249:boolean checkChecksum(java.lang.String)
+    286:286:int[] decodeEnd(com.google.zxing.common.BitArray,int)
+    293:293:static int[] findGuardPattern(com.google.zxing.common.BitArray,int,boolean,int[])
+    312:338:private static int[] findGuardPattern(com.google.zxing.common.BitArray,int,boolean,int[],int[])
+    355:370:static int decodeDigit(com.google.zxing.common.BitArray,int[],int,int[][])
+    abstract com.google.zxing.BarcodeFormat getBarcodeFormat()
+    protected abstract int decodeMiddle(com.google.zxing.common.BitArray,int[],java.lang.StringBuilder)
+com.google.zxing.oned.UPCEReader
+com.google.zxing.oned.rss.AbstractRSSReader
+com.google.zxing.oned.rss.DataCharacter
+com.google.zxing.oned.rss.FinderPattern
+com.google.zxing.oned.rss.Pair
+com.google.zxing.oned.rss.RSS14Reader
+com.google.zxing.oned.rss.RSSUtils
+com.google.zxing.oned.rss.expanded.BitArrayBuilder
+com.google.zxing.oned.rss.expanded.ExpandedPair
+com.google.zxing.oned.rss.expanded.ExpandedRow
+com.google.zxing.oned.rss.expanded.RSSExpandedReader
+com.google.zxing.oned.rss.expanded.decoders.AI013103decoder
+com.google.zxing.oned.rss.expanded.decoders.AI01320xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01392xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01393xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI013x0x1xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI013x0xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01AndOtherAIs
+com.google.zxing.oned.rss.expanded.decoders.AI01decoder
+com.google.zxing.oned.rss.expanded.decoders.AI01weightDecoder
+com.google.zxing.oned.rss.expanded.decoders.AbstractExpandedDecoder
+com.google.zxing.oned.rss.expanded.decoders.AnyAIDecoder
+com.google.zxing.oned.rss.expanded.decoders.BlockParsedResult
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState$State
+com.google.zxing.oned.rss.expanded.decoders.DecodedChar
+com.google.zxing.oned.rss.expanded.decoders.DecodedInformation
+com.google.zxing.oned.rss.expanded.decoders.DecodedNumeric
+com.google.zxing.oned.rss.expanded.decoders.DecodedObject
+com.google.zxing.oned.rss.expanded.decoders.FieldParser
+com.google.zxing.oned.rss.expanded.decoders.GeneralAppIdDecoder
+com.google.zxing.pdf417.PDF417Common
+com.google.zxing.pdf417.PDF417Reader
+com.google.zxing.pdf417.PDF417ResultMetadata
+com.google.zxing.pdf417.PDF417Writer:
+    static final int WHITE_SPACE
+    static final int DEFAULT_ERROR_CORRECTION_LEVEL
+    95:95:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.pdf417.decoder.BarcodeMetadata
+com.google.zxing.pdf417.decoder.BarcodeValue
+com.google.zxing.pdf417.decoder.BoundingBox
+com.google.zxing.pdf417.decoder.Codeword
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser$1
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser$Mode
+com.google.zxing.pdf417.decoder.DetectionResult
+com.google.zxing.pdf417.decoder.DetectionResultColumn
+com.google.zxing.pdf417.decoder.DetectionResultRowIndicatorColumn
+com.google.zxing.pdf417.decoder.PDF417CodewordDecoder
+com.google.zxing.pdf417.decoder.PDF417ScanningDecoder
+com.google.zxing.pdf417.decoder.ec.ErrorCorrection
+com.google.zxing.pdf417.decoder.ec.ModulusGF
+com.google.zxing.pdf417.decoder.ec.ModulusPoly
+com.google.zxing.pdf417.detector.Detector
+com.google.zxing.pdf417.detector.PDF417DetectorResult
+com.google.zxing.pdf417.encoder.BarcodeMatrix:
+    47:48:void set(int,int,byte)
+    65:65:public byte[][] getMatrix()
+com.google.zxing.pdf417.encoder.BarcodeRow:
+    43:44:void set(int,byte)
+com.google.zxing.pdf417.encoder.Dimensions:
+    31:36:public Dimensions(int,int,int,int)
+com.google.zxing.pdf417.encoder.PDF417:
+    private static final int START_PATTERN
+    private static final int STOP_PATTERN
+    private static final float PREFERRED_RATIO
+    private static final float DEFAULT_MODULE_WIDTH
+    private static final float HEIGHT
+com.google.zxing.pdf417.encoder.PDF417ErrorCorrection:
+    127:128:private PDF417ErrorCorrection()
+    152:167:static int getRecommendedMinimumErrorCorrectionLevel(int)
+com.google.zxing.pdf417.encoder.PDF417HighLevelEncoder:
+    private static final int TEXT_COMPACTION
+    private static final int BYTE_COMPACTION
+    private static final int NUMERIC_COMPACTION
+    private static final int SUBMODE_ALPHA
+    private static final int SUBMODE_LOWER
+    private static final int SUBMODE_MIXED
+    private static final int SUBMODE_PUNCTUATION
+    private static final int LATCH_TO_TEXT
+    private static final int LATCH_TO_BYTE_PADDED
+    private static final int LATCH_TO_NUMERIC
+    private static final int SHIFT_TO_BYTE
+    private static final int LATCH_TO_BYTE
+    private static final int ECI_USER_DEFINED
+    private static final int ECI_GENERAL_PURPOSE
+    private static final int ECI_CHARSET
+    131:132:private PDF417HighLevelEncoder()
+com.google.zxing.qrcode.QRCodeReader
+com.google.zxing.qrcode.QRCodeWriter:
+    private static final int QUIET_ZONE_SIZE
+    44:44:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.qrcode.decoder.BitMatrixParser
+com.google.zxing.qrcode.decoder.DataBlock
+com.google.zxing.qrcode.decoder.DataMask
+com.google.zxing.qrcode.decoder.DataMask$1
+com.google.zxing.qrcode.decoder.DataMask$DataMask000
+com.google.zxing.qrcode.decoder.DataMask$DataMask001
+com.google.zxing.qrcode.decoder.DataMask$DataMask010
+com.google.zxing.qrcode.decoder.DataMask$DataMask011
+com.google.zxing.qrcode.decoder.DataMask$DataMask100
+com.google.zxing.qrcode.decoder.DataMask$DataMask101
+com.google.zxing.qrcode.decoder.DataMask$DataMask110
+com.google.zxing.qrcode.decoder.DataMask$DataMask111
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser
+com.google.zxing.qrcode.decoder.Decoder
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel:
+    53:56:public static com.google.zxing.qrcode.decoder.ErrorCorrectionLevel forBits(int)
+com.google.zxing.qrcode.decoder.FormatInformation
+com.google.zxing.qrcode.decoder.Mode:
+    53:76:public static com.google.zxing.qrcode.decoder.Mode forBits(int)
+com.google.zxing.qrcode.decoder.QRCodeDecoderMetaData
+com.google.zxing.qrcode.decoder.Version:
+    70:70:public int[] getAlignmentPatternCenters()
+    93:99:public static com.google.zxing.qrcode.decoder.Version getProvisionalVersionForDimension(int)
+    111:133:static com.google.zxing.qrcode.decoder.Version decodeVersionInformation(int)
+    140:175:com.google.zxing.common.BitMatrix buildFunctionPattern()
+com.google.zxing.qrcode.detector.AlignmentPattern
+com.google.zxing.qrcode.detector.AlignmentPatternFinder
+com.google.zxing.qrcode.detector.Detector
+com.google.zxing.qrcode.detector.FinderPattern
+com.google.zxing.qrcode.detector.FinderPatternFinder
+com.google.zxing.qrcode.detector.FinderPatternFinder$1
+com.google.zxing.qrcode.detector.FinderPatternFinder$CenterComparator
+com.google.zxing.qrcode.detector.FinderPatternFinder$FurthestFromAverageComparator
+com.google.zxing.qrcode.detector.FinderPatternInfo
+com.google.zxing.qrcode.encoder.ByteMatrix:
+    57:58:public void set(int,int,byte)
+com.google.zxing.qrcode.encoder.Encoder:
+    static final java.lang.String DEFAULT_BYTE_MODE_ENCODING
+    52:53:private Encoder()
+    72:72:public static com.google.zxing.qrcode.encoder.QRCode encode(java.lang.String,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel)
+    176:176:public static com.google.zxing.qrcode.decoder.Mode chooseMode(java.lang.String)
+com.google.zxing.qrcode.encoder.MaskUtil:
+    private static final int N1
+    private static final int N2
+    private static final int N3
+    private static final int N4
+    32:34:private MaskUtil()
+com.google.zxing.qrcode.encoder.MatrixUtil:
+    private static final int VERSION_INFO_POLY
+    private static final int TYPE_INFO_POLY
+    private static final int TYPE_INFO_MASK_PATTERN
+    30:32:private MatrixUtil()
+com.google.zxing.qrcode.encoder.QRCode:
+    public static final int NUM_MASK_PATTERNS
+    42:42:public com.google.zxing.qrcode.decoder.Mode getMode()
+    46:46:public com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getECLevel()
+    50:50:public com.google.zxing.qrcode.decoder.Version getVersion()
+    54:54:public int getMaskPattern()
+okio.AsyncTimeout
+okio.AsyncTimeout$Watchdog
+okio.Base64
+okio.Buffer:
+    60:60:public okio.Buffer buffer()
+    64:64:public java.io.OutputStream outputStream()
+    86:86:public okio.Buffer emitCompleteSegments()
+    98:98:public java.io.InputStream inputStream()
+    123:123:public okio.Buffer copyTo(java.io.OutputStream)
+    131:149:public okio.Buffer copyTo(java.io.OutputStream,long,long)
+    154:154:public okio.Buffer writeTo(java.io.OutputStream)
+    159:177:public okio.Buffer writeTo(java.io.OutputStream,long)
+    182:183:public okio.Buffer readFrom(java.io.InputStream)
+    188:190:public okio.Buffer readFrom(java.io.InputStream,long)
+    194:206:private void readFrom(java.io.InputStream,long,boolean)
+    214:223:public long completeSegmentByteCount()
+    249:250:public byte getByte(long)
+    258:283:public short readShort()
+    353:353:public short readShortLe()
+    369:370:public void readFully(okio.Buffer,long)
+    373:375:public long readAll(okio.Sink)
+    379:379:public java.lang.String readUtf8()
+    383:383:public java.lang.String readUtf8(long)
+    387:387:public java.lang.String readString(java.nio.charset.Charset)
+    416:422:public java.lang.String readUtf8Line()
+    426:428:public java.lang.String readUtf8LineStrict()
+    432:442:java.lang.String readUtf8Line(long)
+    475:488:int read(byte[],int,int)
+    518:518:public okio.Buffer write(okio.ByteString)
+    523:523:public okio.Buffer writeUtf8(java.lang.String)
+    527:528:public okio.Buffer writeString(java.lang.String,java.nio.charset.Charset)
+    552:556:public long writeAll(okio.Source)
+    560:563:public okio.Buffer writeByte(int)
+    567:574:public okio.Buffer writeShort(int)
+    578:578:public okio.Buffer writeShortLe(int)
+    582:591:public okio.Buffer writeInt(int)
+    595:595:public okio.Buffer writeIntLe(int)
+    599:612:public okio.Buffer writeLong(long)
+    616:616:public okio.Buffer writeLongLe(long)
+    737:737:public long indexOf(byte)
+    745:762:public long indexOf(byte,long)
+    766:766:public void flush()
+    772:772:public okio.Timeout timeout()
+    777:783:java.util.List segmentSizes()
+    47:47:public bridge synthetic okio.BufferedSink emitCompleteSegments()
+    47:47:public bridge synthetic okio.BufferedSink writeLongLe(long)
+    47:47:public bridge synthetic okio.BufferedSink writeLong(long)
+    47:47:public bridge synthetic okio.BufferedSink writeIntLe(int)
+    47:47:public bridge synthetic okio.BufferedSink writeInt(int)
+    47:47:public bridge synthetic okio.BufferedSink writeShortLe(int)
+    47:47:public bridge synthetic okio.BufferedSink writeShort(int)
+    47:47:public bridge synthetic okio.BufferedSink writeByte(int)
+    47:47:public bridge synthetic okio.BufferedSink writeString(java.lang.String,java.nio.charset.Charset)
+    47:47:public bridge synthetic okio.BufferedSink writeUtf8(java.lang.String)
+    47:47:public bridge synthetic okio.BufferedSink write(byte[],int,int)
+    47:47:public bridge synthetic okio.BufferedSink write(byte[])
+    47:47:public bridge synthetic okio.BufferedSink write(okio.ByteString)
+okio.Buffer$1
+okio.Buffer$2
+okio.BufferedSink:
+    public abstract okio.Buffer buffer()
+    public abstract okio.BufferedSink write(okio.ByteString)
+    public abstract okio.BufferedSink write(byte[])
+    public abstract okio.BufferedSink write(byte[],int,int)
+    public abstract long writeAll(okio.Source)
+    public abstract okio.BufferedSink writeUtf8(java.lang.String)
+    public abstract okio.BufferedSink writeString(java.lang.String,java.nio.charset.Charset)
+    public abstract okio.BufferedSink writeByte(int)
+    public abstract okio.BufferedSink writeShort(int)
+    public abstract okio.BufferedSink writeShortLe(int)
+    public abstract okio.BufferedSink writeInt(int)
+    public abstract okio.BufferedSink writeIntLe(int)
+    public abstract okio.BufferedSink writeLong(long)
+    public abstract okio.BufferedSink writeLongLe(long)
+    public abstract okio.BufferedSink emitCompleteSegments()
+    public abstract java.io.OutputStream outputStream()
+okio.BufferedSource:
+    public abstract okio.Buffer buffer()
+    public abstract short readShort()
+    public abstract short readShortLe()
+    public abstract int readInt()
+    public abstract long readLong()
+    public abstract byte[] readByteArray(long)
+    public abstract void readFully(okio.Buffer,long)
+    public abstract long readAll(okio.Sink)
+    public abstract java.lang.String readUtf8()
+    public abstract java.lang.String readUtf8(long)
+    public abstract java.lang.String readUtf8Line()
+    public abstract java.lang.String readUtf8LineStrict()
+    public abstract java.lang.String readString(java.nio.charset.Charset)
+    public abstract long indexOf(byte)
+    public abstract java.io.InputStream inputStream()
+okio.ByteString:
+    private transient java.lang.String utf8
+    76:78:public static okio.ByteString encodeUtf8(java.lang.String)
+    83:85:public java.lang.String utf8()
+    94:94:public java.lang.String base64()
+    102:103:public static okio.ByteString decodeBase64(java.lang.String)
+    119:127:public static okio.ByteString decodeHex(java.lang.String)
+    131:134:private static int decodeHexDigit(char)
+    159:174:public okio.ByteString toAsciiLowercase()
+    184:199:public okio.ByteString toAsciiUppercase()
+    204:204:public byte getByte(int)
+    223:224:public void write(java.io.OutputStream)
+okio.DeflaterSink
+okio.GzipSink
+okio.GzipSource
+okio.InflaterSource
+okio.Okio:
+    49:49:public static okio.BufferedSink buffer(okio.Sink)
+    54:54:public static okio.Sink sink(java.io.OutputStream)
+    58:58:private static okio.Sink sink(java.io.OutputStream,okio.Timeout)
+    102:104:public static okio.Sink sink(java.net.Socket)
+    187:189:public static okio.Source source(java.net.Socket)
+    223:223:private static okio.AsyncTimeout timeout(java.net.Socket)
+    28:28:static synthetic java.util.logging.Logger access$000()
+okio.Okio$1
+okio.Okio$2
+okio.Okio$3:
+    172:172:public okio.Timeout timeout()
+okio.Okio$4
+okio.Okio$5
+okio.RealBufferedSink
+okio.RealBufferedSink$1
+okio.RealBufferedSource:
+    41:41:public okio.Buffer buffer()
+    80:81:public byte[] readByteArray(long)
+    85:87:public void readFully(okio.Buffer,long)
+    90:102:public long readAll(okio.Sink)
+    107:108:public java.lang.String readUtf8()
+    112:113:public java.lang.String readUtf8(long)
+    118:119:public java.lang.String readString(java.nio.charset.Charset)
+    128:134:public java.lang.String readUtf8Line()
+    138:140:public java.lang.String readUtf8LineStrict()
+    144:145:public short readShort()
+    149:150:public short readShortLe()
+    154:155:public int readInt()
+    164:165:public long readLong()
+    186:193:public long indexOf(byte)
+    197:197:public java.io.InputStream inputStream()
+    242:242:public okio.Timeout timeout()
+    25:25:static synthetic boolean access$000(okio.RealBufferedSource)
+okio.RealBufferedSource$1
+okio.Segment:
+    static final int SIZE
+okio.SegmentPool:
+    static final long MAX_SIZE
+okio.Sink:
+    public abstract void write(okio.Buffer,long)
+    public abstract void flush()
+    public abstract okio.Timeout timeout()
+    public abstract void close()
+okio.Source:
+    public abstract okio.Timeout timeout()
+okio.Timeout:
+    74:76:public okio.Timeout timeout(long,java.util.concurrent.TimeUnit)
+    81:81:public long getTimeoutNanos()
+    90:93:public okio.Timeout deadline(long,java.util.concurrent.TimeUnit)
+    100:102:public okio.Timeout clear()
+okio.Timeout$1:
+    50:50:public okio.Timeout timeout(long,java.util.concurrent.TimeUnit)
+    54:54:public okio.Timeout deadline(long,java.util.concurrent.TimeUnit)
+okio.Util:
+    24:25:private Util()
+    35:38:public static short reverseBytesShort(short)
+    65:66:public static void sneakyRethrow(java.lang.Throwable)
+    70:70:private static void sneakyThrow2(java.lang.Throwable)

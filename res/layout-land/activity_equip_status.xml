@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+
+    <include
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_bottom" />
+
+    <ScrollView
+        style="@style/ScrollView"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="50dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/motor_status" />
+
+                <TextView
+                    android:id="@+id/tv_motor_status"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/paper_money_status" />
+
+                <TextView
+                    android:id="@+id/tv_paper_money"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/coin_status" />
+
+                <TextView
+                    android:id="@+id/tv_coin"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/change_status" />
+
+                <TextView
+                    android:id="@+id/tv_change"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/deputy_conn_status" />
+
+                <TextView
+                    android:id="@+id/tv_conn"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/MainBlackText"
+                    android:text="@string/equip_id" />
+
+                <TextView
+                    android:id="@+id/tv_sbid"
+                    style="@style/MainBlackText"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

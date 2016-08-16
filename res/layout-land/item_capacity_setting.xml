@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- 货号 -->
+
+    <TextView
+        style="@style/MainBlackText"
+        android:text="@string/goods_number" />
+
+    <TextView
+        android:id="@+id/tv_goods_num"
+        style="@style/MainBlackText"
+        android:background="@drawable/selector_text_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="1" />
+    <!-- 价格 -->
+
+    <TextView
+        style="@style/MainBlackText"
+        android:layout_marginLeft="30dp"
+        android:text="@string/capacity" />
+
+    <EditText
+        android:id="@+id/et_capacity"
+        style="@style/MainBlackText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_text_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="请输入容量"
+        android:maxLength="4"
+        android:singleLine="true" />
+
+</LinearLayout>

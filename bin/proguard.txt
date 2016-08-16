@@ -1,0 +1,94 @@
+# view AndroidManifest.xml #generated:21
+-keep class com.curry.vendingmachine.App { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.curry.vendingmachine.BootBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:28
+-keep class com.curry.vendingmachine.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:100
+-keep class com.curry.vendingmachine.database.CurryContentProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.curry.vendingmachine.modules.DateSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.curry.vendingmachine.modules.EnvSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class com.curry.vendingmachine.modules.EquipStatusActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class com.curry.vendingmachine.modules.MotorStatusDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.curry.vendingmachine.modules.PathSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.curry.vendingmachine.modules.PayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:95
+-keep class com.curry.vendingmachine.modules.PaySettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.curry.vendingmachine.modules.PriceSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.curry.vendingmachine.modules.SalesStatisticsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.curry.vendingmachine.modules.SelectGoodsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class com.curry.vendingmachine.modules.WirelessSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.curry.vendingmachine.modules.settings.SettingsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.curry.vendingmachine.modules.settings.stock.ListSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.curry.vendingmachine.modules.settings.stock.StockSettingActivity { <init>(...); }
+
+# view land/res/layout-land/activity_main.xml #generated:34
+# view land/res/layout-land/activity_main.xml #generated:51
+# view land/res/layout-land/activity_main.xml #generated:69
+# view land/res/layout-land/activity_pay.xml #generated:123
+# view land/res/layout-land/activity_pay.xml #generated:148
+# view land/res/layout-land/activity_settings.xml #generated:125
+# view land/res/layout-land/activity_settings.xml #generated:156
+# view land/res/layout-land/activity_settings.xml #generated:30
+# view land/res/layout-land/fragment_instruction.xml #generated:34
+# view land/res/layout-land/fragment_instruction.xml #generated:51
+# view land/res/layout-land/fragment_instruction.xml #generated:69
+# view land/res/layout-land/fragment_welcome.xml #generated:1
+# view land/res/layout-land/fragment_welcome.xml #generated:24
+# view land/res/layout-land/fragment_welcome.xml #generated:8
+# view land/res/layout-land/item_motor_status.xml #generated:2
+# view res/layout/fragment_instruction.xml #generated:34
+# view res/layout/fragment_instruction.xml #generated:51
+# view res/layout/fragment_instruction.xml #generated:69
+# view res/layout/fragment_welcome.xml #generated:1
+# view res/layout/fragment_welcome.xml #generated:24
+# view res/layout/fragment_welcome.xml #generated:8
+-keep class com.curry.vendingmachine.percent.PercentLinearLayout { <init>(...); }
+
+# view land/res/layout-land/activity_main.xml #generated:12
+# view land/res/layout-land/activity_main.xml #generated:88
+# view land/res/layout-land/fragment_instruction.xml #generated:12
+# view land/res/layout-land/fragment_instruction.xml #generated:88
+# view res/layout/fragment_instruction.xml #generated:12
+# view res/layout/fragment_instruction.xml #generated:88
+-keep class com.curry.vendingmachine.percent.PercentRelativeLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.curry.vendingmachine.serialport.CurrySerialPortActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.umeng.update.UpdateDialogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:113
+-keep class com.umeng.update.net.DownloadingService { <init>(...); }
+

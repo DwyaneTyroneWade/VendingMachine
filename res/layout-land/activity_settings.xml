@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+
+    <include
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_bottom" />
+
+    <ScrollView
+        style="@style/ScrollView"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.curry.vendingmachine.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/stock_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    percent:layout_widthPercent="50%w"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/stock_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/env_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/env_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+            </com.curry.vendingmachine.percent.PercentLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/price_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/price_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/date_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/date_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sales_statistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sales_statistics"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/temperature_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/temperature_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <com.curry.vendingmachine.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/equip_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    percent:layout_widthPercent="50%w"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/equipment_status"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/path_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/path_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+            </com.curry.vendingmachine.percent.PercentLinearLayout>
+
+            <com.curry.vendingmachine.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/wireless_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    percent:layout_widthPercent="50%w"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/wireless_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/pay_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/pay_setting"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25sp" />
+            </com.curry.vendingmachine.percent.PercentLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

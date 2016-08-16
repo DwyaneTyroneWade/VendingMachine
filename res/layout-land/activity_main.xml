@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/main_background">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+
+    <com.curry.vendingmachine.percent.PercentRelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:id="@+id/setting_enterance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            percent:layout_textSizePercent="15%h"
+            android:text="进入设置"
+            android:textColor="#FF3A1C" >
+        </TextView>
+
+        <com.curry.vendingmachine.percent.PercentLinearLayout
+            android:id="@+id/ll_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            percent:layout_heightPercent="25%h"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/first_select_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                percent:layout_textSizePercent="80%h"
+                android:text="@string/select_goods"
+                android:textColor="@color/text_color_dark_yellow" >
+            </TextView>
+        </com.curry.vendingmachine.percent.PercentLinearLayout>
+
+        <com.curry.vendingmachine.percent.PercentLinearLayout
+            android:id="@+id/ll_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_first"
+            percent:layout_heightPercent="25%h"
+            percent:layout_paddingLeftPercent="22%w" >
+
+            <TextView
+                android:id="@+id/second_putin_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                percent:layout_textSizePercent="80%h"
+                android:text="@string/put_in_coin"
+                android:textColor="@color/text_color_dark_yellow" >
+            </TextView>
+        </com.curry.vendingmachine.percent.PercentLinearLayout>
+
+        <com.curry.vendingmachine.percent.PercentLinearLayout
+            android:id="@+id/ll_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_second"
+            percent:layout_heightPercent="25%h"
+            percent:layout_paddingLeftPercent="44%w" >
+
+            <TextView
+                android:id="@+id/third_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_putin_coin"
+                percent:layout_textSizePercent="80%h"
+                android:text="@string/pickup"
+                android:textColor="@color/text_color_dark_yellow" >
+            </TextView>
+        </com.curry.vendingmachine.percent.PercentLinearLayout>
+
+        <com.curry.vendingmachine.percent.PercentRelativeLayout
+            android:id="@+id/ll_fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_third"
+            percent:layout_heightPercent="25%h" >
+
+            <TextView
+                android:id="@+id/fourth_keep_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                percent:layout_textSizePercent="80%h"
+                android:text="@string/keep_change"
+                android:textColor="@color/text_color_dark_yellow" >
+            </TextView>
+        </com.curry.vendingmachine.percent.PercentRelativeLayout>
+    </com.curry.vendingmachine.percent.PercentRelativeLayout>
+
+    <include
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_bottom" />
+
+</RelativeLayout>

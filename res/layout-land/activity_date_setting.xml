@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+
+    <include
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_bottom" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/tv_year"
+            style="@style/MainBlackText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="4"
+            android:text="0000" />
+
+        <TextView
+            style="@style/MainBlackText"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/tv_month"
+            style="@style/MainBlackText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="2"
+            android:text="00" />
+
+        <TextView
+            style="@style/MainBlackText"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/tv_day"
+            style="@style/MainBlackText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="2"
+            android:text="00" />
+
+        <EditText
+            android:id="@+id/tv_hour"
+            style="@style/MainBlackText"
+            android:layout_marginLeft="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="2"
+            android:text="00" />
+
+        <TextView
+            style="@style/MainBlackText"
+            android:text=":" />
+
+        <EditText
+            android:id="@+id/tv_min"
+            style="@style/MainBlackText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="2"
+            android:text="00" />
+
+        <TextView
+            style="@style/MainBlackText"
+            android:text=":" />
+
+        <EditText
+            android:id="@+id/tv_sec"
+            style="@style/MainBlackText"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="2"
+            android:text="00" />
+    </LinearLayout>
+
+</RelativeLayout>
